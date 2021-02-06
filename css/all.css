@@ -1,0 +1,421 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: bubble;
+  src: url(../font/jf-openhuninn-1.1.ttf);
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: bubble,'Microsoft JhengHei';
+}
+
+body, html {
+  height: 100%;
+  color: #424242;
+  background: #efefef;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.wrapper .header {
+  background: #424242;
+}
+
+.wrapper .header .calcArea {
+  padding: 70px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header .calcArea .logo {
+  display: block;
+  background: url(../img/BMICLogo.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  width: 117px;
+  height: 117px;
+}
+
+.wrapper .header .calcArea .calcInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 250px;
+}
+
+.wrapper .header .calcArea .calcInput label {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #FFD366;
+}
+
+.wrapper .header .calcArea .calcInput input[type="text"] {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffff;
+  border: 2px solid #FFD366;
+  border-radius: 5px;
+}
+
+.wrapper .header .calcArea .calcInput ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .header .calcArea .calcInput :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .header .calcArea .calcInput ::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .header .calcArea .calcInput ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper .header .btn {
+  border: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.wrapper .header .submitBtn {
+  background: #FFD366;
+  font-size: 1.5rem;
+  color: #424242;
+  cursor: pointer;
+}
+
+.wrapper .header .submitBtn:hover {
+  -webkit-box-shadow: 0 1px 6px 3px #FFD366;
+          box-shadow: 0 1px 6px 3px #FFD366;
+}
+
+.wrapper .header .submitBtn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #DEA921;
+}
+
+.wrapper .header .status {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header .status .statusPanel {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  border: 6px solid;
+}
+
+.wrapper .header .status .statusPanel h3 {
+  font-size: 2rem;
+}
+
+.wrapper .header .status .statusPanel .refreshBtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #424242;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header .status .statusPanel .refreshBtn img {
+  width: 14px;
+  height: 19px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.wrapper .header .status .statusPanel .refreshBtn:hover {
+  cursor: pointer;
+}
+
+.wrapper .header .status .statusPanel .refreshBtn:hover img {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.wrapper .header .status .statusText {
+  font-size: 2rem;
+}
+
+.wrapper .index-main {
+  padding-bottom: 95px;
+}
+
+.wrapper .index-main .calcList {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.wrapper .index-main .calcList .alertText {
+  position: absolute;
+  top: 15px;
+  font-size: 1.25rem;
+  color: #FF1200;
+}
+
+.wrapper .index-main .calcList h2 {
+  font-size: 1.5rem;
+  padding: 50px 0;
+}
+
+.wrapper .index-main .calcList .delete {
+  margin-bottom: 20px;
+  text-decoration: none;
+  background: #FFD366;
+  color: #FF1200;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px gray;
+          box-shadow: 3px 3px gray;
+}
+
+.wrapper .index-main .calcList .delete:active {
+  -webkit-box-shadow: 1px 1px gray;
+          box-shadow: 1px 1px gray;
+}
+
+.wrapper .index-main .calcList .listPanel {
+  width: 100%;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  padding: 20px 5%;
+  margin-bottom: 10px;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem .listStatus {
+  font-weight: bolder;
+  font-size: 1.25rem;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem > div h5 {
+  font-size: .75rem;
+  margin-right: 5px;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem > div p {
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem > div:last-child {
+  width: 10%;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem .listDelete {
+  display: block;
+  width: 100%;
+}
+
+.wrapper .index-main .calcList .listPanel .listItem .listDelete img {
+  margin: 0 auto;
+  width: 30px;
+}
+
+.footer {
+  background: #FFD366;
+  margin-top: -95px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weight-success-color {
+  color: #86D73F;
+}
+
+.weight-success-background {
+  background: #86D73F;
+}
+
+.weight-success-border {
+  border-left: 6px solid #86D73F;
+}
+
+.weight-primary-color {
+  color: #31BAF9;
+}
+
+.weight-primary-background {
+  background: #31BAF9;
+}
+
+.weight-primary-border {
+  border-left: 6px solid #31BAF9;
+}
+
+.weight-warming-color {
+  color: #FF982D;
+}
+
+.weight-warming-background {
+  background: #FF982D;
+}
+
+.weight-warming-border {
+  border-left: 6px solid #FF982D;
+}
+
+.weight-info-color {
+  color: #FF6C03;
+}
+
+.weight-info-background {
+  background: #FF6C03;
+}
+
+.weight-info-border {
+  border-left: 6px solid #FF6C03;
+}
+
+.weight-danger-color {
+  color: #FF1200;
+}
+
+.weight-danger-background {
+  background: #FF1200;
+}
+
+.weight-danger-border {
+  border-left: 6px solid #FF1200;
+}
+/*# sourceMappingURL=all.css.map */

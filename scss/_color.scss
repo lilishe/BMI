@@ -1,0 +1,25 @@
+.weight-success{
+    &-color{color:$weight-success;}
+    &-background{background:$weight-success;}
+    &-border{border-left:6px solid $weight-success;}
+}
+.weight-primary{
+    &-color{color:$weight-primary;}
+    &-background{background:$weight-primary;}
+    &-border{border-left:6px solid $weight-primary;}
+}
+.weight-warming{
+    &-color{color:$weight-warming;}
+    &-background{background:$weight-warming;}
+    &-border{border-left:6px solid $weight-warming;}
+}
+.weight-info{
+    &-color{color:$weight-info;}
+    &-background{background:$weight-info;}
+    &-border{border-left:6px solid $weight-info;}
+}
+.weight-danger{
+    &-color{color:$danger;}
+    &-background{background:$danger;}
+    &-border{border-left:6px solid $danger;}
+}
