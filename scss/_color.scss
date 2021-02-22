@@ -1,25 +1,29 @@
 .weight-success{
-    &-color{color:$weight-success;}
-    &-background{background:$weight-success;}
-    &-border{border-left:6px solid $weight-success;}
+    &-border{border-left:6px solid $success;}
+    &-color{color:$success;}
+    &-bg{background: $success;}
 }
+
 .weight-primary{
-    &-color{color:$weight-primary;}
-    &-background{background:$weight-primary;}
-    &-border{border-left:6px solid $weight-primary;}
+    &-border{border-left:6px solid $primary;}
+    &-color{color:$primary;}
+    &-bg{background: $primary;}
 }
-.weight-warming{
-    &-color{color:$weight-warming;}
-    &-background{background:$weight-warming;}
-    &-border{border-left:6px solid $weight-warming;}
+
+.weight-secondary{
+    &-border{border-left:6px solid $secondary;}
+    &-color{color:$secondary;}
+    &-bg{background: $secondary;}
 }
+
 .weight-info{
-    &-color{color:$weight-info;}
-    &-background{background:$weight-info;}
-    &-border{border-left:6px solid $weight-info;}
+    &-border{border-left:6px solid $info;}
+    &-color{color:$info;}
+    &-bg{background: $info;}
 }
+
 .weight-danger{
-    &-color{color:$danger;}
-    &-background{background:$danger;}
     &-border{border-left:6px solid $danger;}
+    &-color{color:$danger;}
+    &-bg{background: $danger;}
 }

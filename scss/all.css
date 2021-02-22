@@ -1,0 +1,403 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: bubble,'Microsoft JhengHei';
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: bubble;
+  src: url(../font/jf-openhuninn-1.1.ttf);
+}
+
+.container {
+  max-width: 100%;
+  height: 100vh;
+}
+
+.container .header {
+  background: #424242;
+  padding: 70px 0;
+}
+
+.container .header .wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .header .wrap .cal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .header .wrap .cal label {
+  color: #ffd366;
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.container .header .wrap .cal input {
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid #ffd366;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 23px;
+}
+
+.container .header .wrap .cal input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.container .header .wrap .cal input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.container .header .wrap .cal input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.container .header .wrap .cal input::placeholder {
+  color: #fff;
+}
+
+.container .header .wrap .submite {
+  background: #ffd366;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.container .header .wrap .submite:hover {
+  -webkit-box-shadow: 0px 1px 6px 3px rgba(255, 211, 102, 0.64);
+          box-shadow: 0px 1px 6px 3px rgba(255, 211, 102, 0.64);
+}
+
+.container .header .wrap .submite:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #DEA821;
+}
+
+.container .header .wrap .status {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.container .header .wrap .status .status-border {
+  position: relative;
+  border: 6px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 18px;
+}
+
+.container .header .wrap .status .status-border .BMI {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.container .header .wrap .status .status-border h5 {
+  font-size: 14px;
+}
+
+.container .header .wrap .status .status-border .change {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #424242;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.container .header .wrap .status .status-border .change:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.container .header .wrap .status .status-Text {
+  font-size: 32px;
+}
+
+.container .btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.container .main {
+  background: #f5f5f5;
+  padding: 43px 0;
+  text-align: center;
+}
+
+.container .main .alert-Text {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #FF1200;
+}
+
+.container .main h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.container .main .clearAll {
+  text-decoration: none;
+  background: #ffd366;
+  border: 0;
+  color: #FF1200;
+  padding: 10px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 3px 3px 3px 3px gray;
+          box-shadow: 3px 3px 3px 3px gray;
+}
+
+.container .main .clearAll:active {
+  -webkit-box-shadow: 1px 1px 1px 1px gray;
+          box-shadow: 1px 1px 1px 1px gray;
+}
+
+.container .main .statusItem {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 21px 19px;
+  margin-bottom: 16px;
+}
+
+.container .main .statusItem p {
+  font-size: 20px;
+}
+
+.container .main .statusItem h5 {
+  font-size: 12px;
+  margin-right: 7px;
+}
+
+.container .main .statusItem .ds-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main .statusItem .delete img {
+  width: 30px;
+}
+
+.container .footer {
+  background: #ffd366;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container .header .wrap {
+    max-width: 700px;
+  }
+  .container .main .statusItem {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container .header {
+    padding: 50px 30px;
+  }
+  .container .header .wrap .logo {
+    display: none;
+  }
+  .container .header .wrap .cal {
+    max-width: 200px;
+  }
+  .container .header .wrap .submite {
+    font-size: 20px;
+  }
+  .container .header .wrap .status .status-border {
+    margin-right: 10px;
+  }
+  .container .header .wrap .status .status-border .BMI {
+    font-size: 20px;
+  }
+  .container .header .wrap .status .status-border .change {
+    width: 20px;
+    height: 20px;
+  }
+  .container .header .wrap .status .status-Text {
+    font-size: 20px;
+  }
+  .container .btn {
+    width: 100px;
+    height: 100px;
+  }
+  .container .main .statusItem {
+    max-width: 90%;
+  }
+  .container .main .statusItem p {
+    font-size: 18px;
+  }
+  .container .main .statusItem h5 {
+    font-size: 10px;
+  }
+  .container .main .statusItem .delete img {
+    width: 20px;
+  }
+}
+
+.weight-success-border {
+  border-left: 6px solid #86D73F;
+}
+
+.weight-success-color {
+  color: #86D73F;
+}
+
+.weight-success-bg {
+  background: #86D73F;
+}
+
+.weight-primary-border {
+  border-left: 6px solid #31BAF9;
+}
+
+.weight-primary-color {
+  color: #31BAF9;
+}
+
+.weight-primary-bg {
+  background: #31BAF9;
+}
+
+.weight-secondary-border {
+  border-left: 6px solid #FF982D;
+}
+
+.weight-secondary-color {
+  color: #FF982D;
+}
+
+.weight-secondary-bg {
+  background: #FF982D;
+}
+
+.weight-info-border {
+  border-left: 6px solid #FF6C03;
+}
+
+.weight-info-color {
+  color: #FF6C03;
+}
+
+.weight-info-bg {
+  background: #FF6C03;
+}
+
+.weight-danger-border {
+  border-left: 6px solid #FF1200;
+}
+
+.weight-danger-color {
+  color: #FF1200;
+}
+
+.weight-danger-bg {
+  background: #FF1200;
+}
+/*# sourceMappingURL=all.css.map */

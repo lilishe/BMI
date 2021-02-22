@@ -2,69 +2,46 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI計算器</title>
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="scss/all.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="container">
         <div class="header">
-            <div class="wrap calcArea">
-                <h1><a href="index.html" class="logo"></a></h1>
-                <div class="calcInput">
+            <div class="wrap">
+                <div class="logo">
+                    <img src="img/BMICLogo.png" alt="">
+                </div>
+                <div class="cal">
                     <label for="height">身高 cm</label>
                     <input type="text" id="height" placeholder="請輸入身高">
                     <label for="weight">體重 kg</label>
                     <input type="text" id="weight" placeholder="請輸入體重">
                 </div>
-                <input type="button" value="看結果" class="btn submitBtn">
+                <input type="button" value="看結果" class="btn submite">
                 <div class="status">
-                    <div class="statusPanel btn">
-                        <h3></h3>
-                        <p>BMI</p>
-                        <div class="refreshBtn">
+                    <div class="status-border btn">
+                        <div class="BMI"></div>
+                        <h5>BMI</h5>
+                        <div class="change">
                             <img src="img/icons_loop.png" alt="">
                         </div>
                     </div>
-                    <div class="statusText"></div>
+                    <div class="status-Text"></div>
                 </div>
             </div>
         </div>
-        <div class="index-main">
-            <div class="wrap calcList">
-                <div class="alertText"></div>
-                <h2>BMI紀錄</h2>
-                <a href="#" class="delete">刪除紀錄</a>
-                <div class="listPanel">
-                    <!-- <div class="listItem">
-                        <div class="listStatus">理想</div>
-                        <div class="listBMI">
-                            <h5>BMI</h5>
-                            <p>22.22</p>
-                        </div>
-                        <div class="listWeight">
-                            <h5>weight</h5>
-                            <p>50</p>
-                        </div>
-                        <div class="listHeight">
-                            <h5>height</h5>
-                            <p>150</p>
-                        </div>
-                        <div class="listDate">
-                            <h5>2021-2-24</h5>
-                        </div>
-                        <div>
-                            <a href="#" class="listDelete">
-                                <img src="img/trash-can.svg" alt="trash">
-                            </a>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
+        <div class="main">
+            <p class="alert-Text"></p>
+            <h2>BMI 紀錄</h2>
+            <button type="button" class="clearAll">全部清除</button>
+            <div class="list"></div>
         </div>
-    </div>
-    <div class="footer">
-        <img src="img/BMI_bottom.png" alt="">
+        <div class="footer">
+            <img src="img/BMI_bottom.png" alt="">
+        </div>
     </div>
     <script src="js/all.js"></script>
 </body>

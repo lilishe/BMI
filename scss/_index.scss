@@ -1,203 +1,157 @@
-*,*::after,*::before{
-    box-sizing: border-box;
-    font-family: bubble,'Microsoft JhengHei';
-}
-
-body,html{
-    height: 100%;
-    color: $primary-dark;
-    background: $body-color;
-}
-img{
-    display: block;
+.container{
     max-width: 100%;
-}
-
-.wrap{
-    max-width: 800px;
-    margin: 0 auto;
-}
-.wrapper{
-    min-height: 100%;  
+    height: 100vh;
     .header{
-        background: $primary-dark;
-        .calcArea{
-            padding: 70px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .logo{
-                display: block;
-                background: url(../img/BMICLogo.png) no-repeat;
-                background-position: center center;
-                background-size: cover;
-                overflow: hidden;
-                width: 117px;
-                height: 117px;
-                
-            }
-            .calcInput{
-                display: flex;
-                flex-direction: column;
-                max-width: 250px;
+        background: $dark;
+        padding: 70px 0;
+        .wrap{
+            max-width: 1000px;
+            margin: 0 auto;
+            display: $ds-flex;
+            justify-content: $jc-between;
+            align-items: $ai-center;
+            .cal{
+                display: $ds-flex;
+                flex-direction: $fx-column;
                 label{
-                    margin-bottom: 5px;
-                    font-size: 1.1rem;
-                    color: $primary-yellow;
+                    color: $warming;
+                    font-size: 18px;
+                    margin-bottom: 7px;
                 }
-                input[type="text"]{
-                    margin-bottom: 15px;
-                    font-size: 1.5rem;
-                    background: $secondary-dark;
-                    color: #ffff;
-                    border:2px solid $primary-yellow;
+                input{
+                    background: $dark-input;
+                    border:2px solid $warming;
                     border-radius: 5px;
-                }
-                ::placeholder{
-                    color: rgba(255,255,255,0.50);
-                }
-            }
-        }
-        .btn{
-            border:0;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-        }
-        .submitBtn{
-            background: $primary-yellow;
-            font-size: 1.5rem;
-            color: $primary-dark;
-            cursor: pointer;
-            &:hover{
-                box-shadow: 0 1px 6px 3px $primary-yellow;
-            }
-            &:active{
-                box-shadow: none;
-                background: $hover-yellow;
-            }
-        }
-        .status{
-            display: none;
-            // display: flex;
-            align-items: center;
-            .statusPanel{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-                border:6px solid;
-                h3{
-                    font-size: 2rem;
-                }
-                .refreshBtn{
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    border:3px solid $primary-dark;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    img{
-                        width: 14px;
-                        height: 19px;
-                        transition: all .6s;
+                    font-size: 24px;
+                    color: #fff;
+                    margin-bottom: 23px;
+                    &::placeholder{
+                        color: $light;
                     }
-                    &:hover{
+                }
+            }
+            .submite{
+                background: $warming;
+                font-size: 24px;
+                cursor: pointer;
+                &:hover{
+                    box-shadow: 0px 1px 6px 3px $btn-hover;
+                }
+                &:active{
+                    box-shadow: none;
+                    background: $btn-active;
+                }
+            }
+            .status{
+                // display: $ds-flex;
+                align-items: $ai-center;
+                display: none;
+                .status-border{
+                    position: relative;
+                    border:6px solid;
+                    display: $ds-flex;
+                    flex-direction: $fx-column;
+                    justify-content: $jc-center;
+                    align-items: $ai-center;
+                    margin-right: 18px;
+                    .BMI{
+                        font-size: 32px;
+                        // color: $success;
+                        margin-bottom: 4px;
+                    }
+                    h5{
+                        font-size: 14px;
+                        // color: $success;
+                    }
+                    .change{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        width: 30px;
+                        height: 30px;
+                        // background: $success;
+                        border-radius: 50%;
+                        border:3px solid $dark;
+                        display: $ds-flex;
+                        justify-content: $jc-center;
+                        align-items: $ai-center;
                         cursor: pointer;
-                        img{
+                        transition: all .5s;
+                        &:hover{
                             transform: rotate(360deg);
                         }
                     }
                 }
-            }
-            .statusText{
-                font-size: 2rem;
+                .status-Text{
+                    // color: $success;
+                    font-size: 32px;
+                }
             }
         }
     }
-    .index-main{
-        padding-bottom: 95px;
-        .calcList{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 50px;
-            .alertText{
-                position: absolute;
-                top: 15px;
-                font-size: 1.25rem;
-                color: $danger;
-            }
-            h2{
-                font-size: 1.5rem;
-                padding: 50px 0;
-            }
-            .delete{
-                margin-bottom: 20px;
-                text-decoration: none;
-                background: $primary-yellow;
-                color: $danger;
-                padding: 10px;
-                border-radius: 5px;
-                box-shadow: 3px 3px gray;
-                &:active{
-                    box-shadow: 1px 1px gray;
-                }
-            }
-            .listPanel{
-                width: 100%;
-                .listItem{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    background: #fff;
-                    padding: 20px 5%;
-                    margin-bottom: 10px;
-                    .listStatus{
-                        font-weight: bolder;
-                        font-size: 1.25rem;
-                    }
-                    & > div{
-                        display: flex;
-                        align-items: center;
-                        width: 15%;
-                        h5{
-                            font-size:.75rem;
-                            margin-right: 5px;
-                        }
-                        p{
-                            font-size: 1.25rem;
-                            font-weight: bolder;
-                        }
-                    }
-                    & > div:last-child{
-                        width: 10%;
-                    }
-                    .listDelete{
-                        display: block;
-                        width: 100%;
-                        img{
-                            margin: 0 auto;
-                            width: 30px;
-                        }
-                    }
-                }
+    .btn{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 0;
+    }
+    .main{
+        background: $main-bg;
+        padding: 43px 0;
+        text-align: center;
+        .alert-Text{
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bolder;
+            color: $danger;
+        }
+        h2{
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .clearAll{
+            text-decoration: none;
+            background: $warming;
+            border:0;
+            color: $danger;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 3px 3px gray;
+            &:active{
+                box-shadow: 1px 1px 1px 1px gray;
             }
         }
+        .statusItem{
+            max-width: 1000px;
+            margin: 0 auto;
+            display: $ds-flex;
+            justify-content: $jc-between;
+            background: $light;
+            align-items: $ai-center;
+            padding: 21px 19px;
+            // border-left:7px solid $success;
+            margin-bottom: 16px;
+            p{
+                font-size: 20px;
+            }
+            h5{
+                font-size: 12px;
+                margin-right: 7px;
+            }
+            .ds-flex{
+                display: $ds-flex;
+                align-items: $ai-center;
+            }
+            .delete img{
+                width: 30px;
+            }
+        }
+    }
+    .footer{
+        background: $warming;
+        padding: 20px 0;
+        text-align: center;
     }
 }
 
-.footer{
-    background: $primary-yellow;
-    margin-top: -95px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
+

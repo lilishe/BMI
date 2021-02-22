@@ -1,0 +1,62 @@
+@media (max-width:768px){
+    .container{
+        .header{
+            .wrap{
+                max-width: 700px;
+            }
+        }
+        .main .statusItem{
+            max-width: 700px;
+        }
+    }
+}
+
+@media (max-width:767px){
+    .container{
+        .header{
+            padding: 50px 30px;
+            .wrap{
+                .logo{
+                    display: none;
+                }
+                .cal{
+                    max-width: 200px;
+                }
+                .submite{
+                    font-size: 20px;
+                }
+                .status{
+                    .status-border{
+                        margin-right: 10px;
+                        .BMI{
+                            font-size: 20px;
+                        }
+                        .change{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    .status-Text{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .btn{
+            width: 100px;
+            height: 100px;
+        }
+        .main .statusItem{
+            max-width: 90%;
+            p{
+                font-size: 18px;
+            }
+            h5{
+                font-size: 10px;
+            }
+            .delete img{
+                width: 20px;
+            }
+        }
+    }
+}
